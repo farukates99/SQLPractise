@@ -1,0 +1,16 @@
+--1.
+SELECT AVG(rental_rate) From film;
+--2.98
+--2.
+SELECT Count(title) From film
+Where title like 'C%';
+--92
+--3
+SELECT length From film
+where rental_rate=0.99
+order by length desc;
+--184
+--4
+SELECT COUNT(DISTINCT replacement_cost) From film
+where length>150;
+--21
