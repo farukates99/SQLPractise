@@ -1,0 +1,15 @@
+SELECT title,length From film
+Where title Like '%n'
+ORDER BY length desc
+limit 5;
+
+SELECT title,length From film
+Where title Like '%n'
+ORDER BY length asc
+offset 5
+limit 5;
+
+SELECT last_name,store_id From customer
+Where store_id=1
+ORDER BY last_name desc
+limit 4;
