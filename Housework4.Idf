@@ -1,0 +1,10 @@
+Select Distinct replacement_cost from film;
+Select Count(DISTINCT replacement_cost) from film;
+Select Count (*) from film
+where title like 'T' and rating='G';
+Select Count (*) from country
+where country like '_____';
+Select Count (*) from city
+where city Ilike '%R';
+
+
