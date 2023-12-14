@@ -13,4 +13,4 @@ select country_id,count(city) from city
 group by country_id,city
 order by count(city) desc
 limit 1;
---cevap 1
+--cevap 60
