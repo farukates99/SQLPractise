@@ -1,0 +1,19 @@
+--1
+select length from film
+where length>(
+select avg(length) from film);
+--answer is 489
+--2
+select rental_rate from film
+where rental_rate=(
+select max(rental_rate) from film);
+--answer is 336
+--3
+select rental_rate,replacement_cost from film
+where rental_rate=(
+select min(rental_rate) from film) and replacement_cost=(select min(replacement_cost) from film);
+--4
+SELECT customer.first_name, customer.last_name, COUNT(payment.customer_id) FROM payment
+INNER JOIN customer ON customer.customer_id = payment.customer_id
+GROUP BY payment.customer_id,customer.first_name,customer.last_name
+ORDER BY  COUNT(payment.customer_id) DESC;
